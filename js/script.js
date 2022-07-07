@@ -1,24 +1,34 @@
 const arrow = document.querySelectorAll('.work__arrow');
 const text = document.querySelectorAll('.work__text');
-let active = false;
 const wrapp = document.querySelectorAll('.work__wrapper');
 const links = document.querySelectorAll('.work__link');
+let active = [false,false,false,false];
 
 arrow.forEach((item, i) => {
     item.addEventListener('click', (e)=>{
-        if ( active == false ) {
+        if ( active[i] == false ) {
             item.style.transform = 'rotate(180deg)';
-            text[i].classList.add('work__text-active');
-            links[i].classList.add('work__link-active');
-            active = true;
-        } else if ( active == true ) {
+            text[i].classList.toggle('work__text-active');
+            links[i].classList.toggle('work__link-active');
+            active[i] = true;
+        } else if ( active[i] == true ) {
             item.style.transform = 'rotate(0deg)';
-            text[i].classList.remove('work__text-active');
-            links[i].classList.remove('work__link-active');
-            active = false;
+            text[i].classList.toggle('work__text-active');
+            links[i].classList.toggle('work__link-active');
+            active[i] = false;
         }
     });
 });
+
+wrapp.forEach((item, i) => {
+    item.addEventListener("mouseover", function(){
+        arrow[i].style.margin = "10px 0px";
+        this.addEventListener("mouseout", function(){
+            arrow[i].style.margin = "5px 0px";
+        });
+    });
+});
+
 
 const over = document.querySelector('.overflou');
 const closedBtn = document.querySelector('.menu__close');
@@ -43,3 +53,4 @@ body.addEventListener('click',(e)=> {
         menuBtn.classList.remove('menu-active');
     }
 });
+
