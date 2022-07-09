@@ -29,7 +29,6 @@ wrapp.forEach((item, i) => {
     });
 });
 
-
 const over = document.querySelector('.overflou');
 const closedBtn = document.querySelector('.menu__close');
 const menuBtn = document.querySelector('.menu');
@@ -37,20 +36,25 @@ const hamb = document.querySelector('.nav__hamb');
 
 hamb.addEventListener('click', ()=>{
     over.classList.add('overflou-active');
-    menuBtn.classList.add('menu-active');
+    setTimeout(function(){
+        menuBtn.classList.add('menu-active');
+    }, 100);
 });
 
 closedBtn.addEventListener('click', ()=>{
-    over.classList.remove('overflou-active');
     menuBtn.classList.remove('menu-active');
+    setTimeout(function(){
+        over.classList.remove('overflou-active');
+    }, 300);
 });
 
 const body = document.querySelector('body');
 
 body.addEventListener('click',(e)=> {
     if ( e.target.classList[0] == 'overflou' ) {
-        over.classList.remove('overflou-active');
         menuBtn.classList.remove('menu-active');
+        setTimeout(function(){
+            over.classList.remove('overflou-active');
+        }, 300);
     }
 });
-
