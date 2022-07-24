@@ -78,8 +78,8 @@ $(function(){
 
     $('.work__btn').each(function(i){
         $(this).click(function(){
-            $($('.work__text')[i]).css('transition', '0s').slideToggle(500, function(){
-                $($('.work__link')[i]).css('transition', '0s').slideToggle(300, function(){
+            $($('.work__link')[i]).css('transition', '0s').slideToggle(300, function(){
+                $($('.work__text')[i]).css('transition', '0s').slideToggle(500, function(){
                     if ( active[i] == false ) {
                         $($('.work__arrow')[i]).css('transform', 'rotate(180deg)');
                         active[i] = true;
