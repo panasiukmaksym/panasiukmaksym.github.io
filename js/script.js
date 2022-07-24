@@ -137,8 +137,10 @@ $(function(){
 
     // show button-up
 
+    var heightWindow = document.documentElement.clientWidth / 2;
+
     $(window).scroll(function(){
-        if ($(this).scrollTop() > 800) {
+        if ($(this).scrollTop() > heightWindow) {
             $('.up').fadeIn();
         } else {
             $('.up').fadeOut();
