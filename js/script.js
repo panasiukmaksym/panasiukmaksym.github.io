@@ -145,4 +145,12 @@ $(function(){
         }
     });
 
+    // scroll down
+
+    $('.first__pointer').click(function(){
+        $('html, body').animate({
+            scrollTop:$(window).scrollTop() + 400
+        }, 1000);
+    });
+
 });
