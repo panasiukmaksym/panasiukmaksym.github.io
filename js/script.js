@@ -120,11 +120,15 @@ $(function(){
     // change language
 
     if ( $('.about .title').text() == 'Про мене' ) {
-        $('.language__ua').css('background', 'white');
-        $('.language__ua a').css('color', 'black');
+        $('.language__ua').css('background', 'white').css('cursor', 'default');
+        $('.language__ua a').css('text-decoration', 'none').css('cursor', 'default').css('color', 'black').click(function(e){
+            e.preventDefault();
+        });
     } else if ( $('.about .title').text() == 'Обо мне' ) {
-        $('.language__ru').css('background', 'white');
-        $('.language__ru a').css('color', 'black');
+        $('.language__ru').css('background', 'white').css('cursor', 'default');
+        $('.language__ru a').css('text-decoration', 'none').css('cursor', 'default').css('color', 'black').click(function(e){
+            e.preventDefault();
+        });
     }
 
     // scroll up for button
