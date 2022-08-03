@@ -45,7 +45,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: none;
 }
 
 .middle {
@@ -81,7 +80,7 @@
 }
 
 .chess {
-    width: 400px;
+    width: 350px; /* 400px */
     margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
@@ -95,7 +94,7 @@
 .chess__card {
     width: 30%;
     background: black;
-    height: 120px;
+    height: 100px; /*120px*/
     position: relative;
 }
 
@@ -105,6 +104,9 @@
     color: orange;
     font-size: 100px;
     left: 28px;
+
+    left: 23px;
+    top: -10px;
 }
 
 .cross::before {
@@ -113,6 +115,9 @@
     color: orange;
     font-size: 100px;
     left: 29px;
+
+    left: 23px;
+    top: -10px;
 }
 
 .reload {
@@ -131,6 +136,6 @@ h2 {
 
 h1 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 500px;
     cursor: pointer;
 }
