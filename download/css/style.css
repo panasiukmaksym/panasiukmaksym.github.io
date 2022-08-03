@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 1s all;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.block {
+    margin: 50px auto;
+    width: 400px;
+    height: 400px;
+    border: 20px solid orange;
+    position: relative;
+}
+
+.inside {
+    background: black;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside:hover {
+    background: red;
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    background: orange;
+}
+
+.button:hover {
+    background: black;
+}
+
+.wrapper {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.insideX, .insideY {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.subs {
+    position: absolute;
+    font-size: 18px;
+    padding: 20px 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    color: white;
+    margin-left: 50px;
+}
+
+.info {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.chess {
+    width: 400px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0px;
+    background: orange;
+    margin-bottom: 300px;
+}
+
+.chess__card {
+    width: 30%;
+    background: black;
+    height: 120px;
+    position: relative;
+}
+
+.circles::before {
+    content: 'O';
+    position: absolute;
+    color: orange;
+    font-size: 100px;
+    left: 28px;
+}
+
+.cross::before {
+    content: 'X';
+    position: absolute;
+    color: orange;
+    font-size: 100px;
+    left: 29px;
+}
+
+.reload {
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    display: block;
+    width: 350px;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 500px;
+    cursor: pointer;
+}
