@@ -81,7 +81,7 @@
 }
 
 .chess {
-    width: 400px;
+    width: 380px;
     margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
@@ -95,7 +95,7 @@
 .chess__card {
     width: 30%;
     background: black;
-    height: 120px;
+    height: 110px;
     position: relative;
 }
 
@@ -104,7 +104,7 @@
     position: absolute;
     color: orange;
     font-size: 100px;
-    left: 28px;
+    left: 23px;
 }
 
 .cross::before {
@@ -112,11 +112,11 @@
     position: absolute;
     color: orange;
     font-size: 100px;
-    left: 29px;
+    left: 25px;
 }
 
 .variable {
-    width: 400px;
+    width: 350px;
     display: flex;
     justify-content: space-between;
     margin: 20px auto;
