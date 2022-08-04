@@ -81,21 +81,21 @@
 }
 
 .chess {
-    width: 350px; /* 400px */
-    margin: 50px auto;
+    width: 400px;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     padding: 10px 0px;
     background: orange;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
 }
 
 .chess__card {
     width: 30%;
     background: black;
-    height: 100px; /*120px*/
+    height: 120px;
     position: relative;
 }
 
@@ -105,9 +105,6 @@
     color: orange;
     font-size: 100px;
     left: 28px;
-
-    left: 19px;
-    top: -10px;
 }
 
 .cross::before {
@@ -116,9 +113,25 @@
     color: orange;
     font-size: 100px;
     left: 29px;
+}
 
-    left: 21px;
-    top: -10px;
+.variable {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.variable__card {
+    background: grey;
+    padding: 10px;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+img {
+    width: 40px;
 }
 
 .reload {
@@ -131,12 +144,11 @@
 h2 {
     text-align: center;
     display: block;
-    width: 350px;
     margin: 20px auto;
+    max-width: 400px;
 }
 
 h1 {
     text-align: center;
-    margin-top: 40px;
-    cursor: pointer;
+    margin-top: 30px;
 }
