@@ -617,7 +617,7 @@ card.forEach((item, i) => {
         } else if (whyAtBox[2] == "circles" && whyAtBox[4] == "circles") {
           actionForComputer(6);
         } else if (whyAtBox[2] == "circles" && whyAtBox[5] == "circles") {
-          actionForComputer(6);
+          actionForComputer(8);
         } else if (whyAtBox[2] == "circles" && whyAtBox[6] == "circles") {
           actionForComputer(4);
         } else if (whyAtBox[2] == "circles" && whyAtBox[7] == "circles") {
