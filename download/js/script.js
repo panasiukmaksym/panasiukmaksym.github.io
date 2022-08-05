@@ -510,24 +510,25 @@ card.forEach((item, i) => {
       // let whyHim = whyAtBox.indexOf('circles');
 
       if (step == 1) {
-        let ranNum = Math.floor(Math.random() * 4);
+        let ranNum = Math.floor(Math.random() * 9);
 
         // if ( ranNum == 0 || ranNum == 2 || ranNum == 6 || ranNum == 8 )
-        console.log(ranNum);
-        if (ranNum == 0 && activeCard[0] == false) {
-          ranNum = 0;
-        } else if (ranNum == 1 && activeCard[2] == false) {
-          ranNum = 2;
-        } else if (ranNum == 2 && activeCard[6] == false) {
-          ranNum = 6;
-        } else if (ranNum == 3 && activeCard[8] == false) {
-          ranNum = 8;
-        } else if (activeCard[6] == false) {
-          ranNum = 6;
-        } else if (activeCard[8] == false) {
-          ranNum = 8;
-        }
-        console.log(ranNum);
+
+        // console.log(ranNum);
+        // if (ranNum == 0 && activeCard[0] == false) {
+        //   ranNum = 0;
+        // } else if (ranNum == 1 && activeCard[2] == false) {
+        //   ranNum = 2;
+        // } else if (ranNum == 2 && activeCard[6] == false) {
+        //   ranNum = 6;
+        // } else if (ranNum == 3 && activeCard[8] == false) {
+        //   ranNum = 8;
+        // } else if (activeCard[6] == false) {
+        //   ranNum = 6;
+        // } else if (activeCard[8] == false) {
+        //   ranNum = 8;
+        // }
+        // console.log(ranNum);
 
         if (activeCard[0] == true) {
           actionForComputer(ranNum);
@@ -1538,6 +1539,7 @@ varEve.addEventListener("click", () => {
     nulling();
 
     inter = setInterval(function () {
+
       let number = getRandom();
 
       if (activeCard[number] == false) {
@@ -1557,6 +1559,7 @@ varEve.addEventListener("click", () => {
         arrAct[number] = true;
         checking();
       }
+      
     }, 1000);
 
     activeAuto = true;
