@@ -1,63 +1,4 @@
-// const arrow = document.querySelectorAll('.work__arrow');
-// const text = document.querySelectorAll('.work__text');
-// const wrapp = document.querySelectorAll('.work__wrapper');
-// const links = document.querySelectorAll('.work__link');
-// let active = [false,false,false,false];
-
-// arrow.forEach((item, i) => {
-//     item.addEventListener('click', (e)=>{
-//         if ( active[i] == false ) {
-//             item.style.transform = 'rotate(180deg)';
-//             text[i].classList.toggle('work__text-active');
-//             links[i].classList.toggle('work__link-active');
-//             active[i] = true;
-//         } else if ( active[i] == true ) {
-//             item.style.transform = 'rotate(0deg)';
-//             text[i].classList.toggle('work__text-active');
-//             links[i].classList.toggle('work__link-active');
-//             active[i] = false;
-//         }
-//     });
-// });
-
-// wrapp.forEach((item, i) => {
-//     item.addEventListener("mouseover", function(){
-//         arrow[i].style.margin = "10px 0px";
-//         this.addEventListener("mouseout", function(){
-//             arrow[i].style.margin = "5px 0px";
-//         });
-//     });
-// });
-
-// const over = document.querySelector('.overflou');
-// const closedBtn = document.querySelector('.menu__close');
-// const menuBtn = document.querySelector('.menu');
-// const hamb = document.querySelector('.nav__hamb');
-
-// hamb.addEventListener('click', ()=>{
-//     over.classList.add('overflou-active');
-//     setTimeout(function(){
-//         menuBtn.classList.add('menu-active');
-//     }, 100);
-// });
-
-// closedBtn.addEventListener('click', ()=>{
-//     menuBtn.classList.remove('menu-active');
-//     setTimeout(function(){
-//         over.classList.remove('overflou-active');
-//     }, 300);
-// });
-
-// const body = document.querySelector('body');
-
-// body.addEventListener('click',(e)=> {
-//     if ( e.target.classList[0] == 'overflou' ) {
-//         menuBtn.classList.remove('menu-active');
-//         setTimeout(function(){
-//             over.classList.remove('overflou-active');
-//         }, 300);
-//     }
-// });
+// scripts on jQuery
 
 $(function(){
 
@@ -155,8 +96,118 @@ $(function(){
 
     $('.first__pointer').click(function(){
         $('html, body').animate({
-            scrollTop:$(window).scrollTop() + 400
+            scrollTop: $(window).scrollTop() + 500
         }, 1000);
+    });
+
+    // fixed tools-card-text font-size when little window width
+
+    $(window).resize( function(){
+        if ( $(document).width() < 1200 ) {
+            $('.tools__text, .tools__title').css({
+                'font-size': '16px'
+            });
+        }
+    });
+
+    // add img-shadow hover effect on JS
+
+    const techCard = document.querySelectorAll('.tech__card');
+    const techImg = document.querySelectorAll('.tech__card img');
+    const techTitle = document.querySelectorAll('.tech__title');
+    const techText = document.querySelectorAll('.tech__text');
+
+    techCard.forEach( (item, i) => {
+        item.addEventListener('mouseover', function(event){
+            item.style.background = 'black';
+            techText[i].style.color = 'white';
+            techTitle[i].style.color = 'orange';
+            techImg[i].style.filter = 'drop-shadow(0px -5px 15px rgba(255, 255, 255, 0.5))';
+        });
+        item.addEventListener('mouseout', function(event){
+            item.style.background = 'linear-gradient(214deg, rgba(0,255,214,0.4) 0%, rgba(255,2,2,0.4) 100%)';
+            techText[i].style.color = 'black';
+            techTitle[i].style.color = 'black';
+            techImg[i].style.filter = 'none';
+        });
+    });
+
+    const toolsCard = document.querySelectorAll('.tools__card');
+    const toolsImg = document.querySelectorAll('.tools__card img');
+    const toolsTitle = document.querySelectorAll('.tools__title');
+    const toolsText = document.querySelectorAll('.tools__text');
+
+    toolsCard.forEach( (item, i) => {
+        item.addEventListener('mouseover', function(event){
+            item.style.background = 'black';
+            toolsText[i].style.color = 'white';
+            toolsTitle[i].style.color = 'orange';
+            toolsImg[i].style.filter = 'drop-shadow(0px 0px 13px rgba(255, 255, 255, 0.5))';
+        });
+        item.addEventListener('mouseout', function(event){
+            item.style.background = 'linear-gradient(214deg, rgba(0,255,214,0.4) 0%, rgba(255,2,2,0.4) 100%)';
+            toolsText[i].style.color = 'black';
+            toolsTitle[i].style.color = 'black';
+            toolsImg[i].style.filter = 'none';
+        });
+    });
+
+    // add info for myself show/hidden on js
+    
+    let aboutInside = document.querySelectorAll('.about *');
+    aboutInside.forEach( item => {
+        item.style.transition = 'none';
+    });
+
+    let activeAbout = false;
+
+    let plusVerticalLine = document.querySelector('.about__vertical');
+    plusVerticalLine.style.transition = '0.6s all';
+
+    $('.about__plus').click( function() {
+        $('.about__slider').slideToggle(1500);
+        $('.about__add').slideToggle(1500, function(){
+            if ( activeAbout == false ) {
+                plusVerticalLine.style.opacity = '0';
+                activeAbout = true;
+            } else if ( activeAbout == true ) {
+                plusVerticalLine.style.opacity = '1';
+                activeAbout = false;
+            }
+        });
+    });
+
+    // different certificate width
+
+    let certificate = document.querySelector('.about__certificate');
+    let certificateButton = document.querySelector('.about__slide img');
+    let certificateActive = false;
+    certificate.style.transition = '0.6s all';
+    certificateButton.style.transition = '0.6s all';
+    certificateButton.addEventListener('click', function(){
+        if ( certificateActive == false ) {
+            certificate.style.width = '100%';
+            certificateButton.style.transform = 'rotate(90deg)';
+            certificateActive = true;
+        } else {
+            certificate.style.width = '40%';
+            certificateButton.style.transform = 'rotate(-90deg)';
+            certificateActive = false;
+        }
+    });
+
+    //modal certificate
+
+    let modalCertificate = document.querySelector('.about__modal');
+    let imgCertificate = document.querySelector('.about__certificate img');
+    modalCertificate.style.transition = '0.6s all';
+
+    imgCertificate.addEventListener('click', function(){
+        modalCertificate.style.display = 'flex';
+    });
+
+    modalCertificate.addEventListener('click', function(){
+        modalCertificate.style.display = 'none';
     });
 
 });
