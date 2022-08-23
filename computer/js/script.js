@@ -45,7 +45,7 @@ sub.addEventListener('click', (e) => {
 
 });
 
-const deadline = '2022-08-06';
+const deadline = '2022-09-31';
 
 
 function getTime(endtime) {
