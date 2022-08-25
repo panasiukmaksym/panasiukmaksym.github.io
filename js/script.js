@@ -15,7 +15,7 @@ $(function(){
 
     // open cards at jq
 
-    var active = [false, false, false, false];
+    var active = [false, false, false, false, false];
 
     $('.work__btn').each(function(i){
         $(this).click(function(){
