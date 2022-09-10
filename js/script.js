@@ -15,7 +15,7 @@ $(function(){
 
     // open cards at jq
 
-    var active = [false, false, false, false, false];
+    var active = [false, false, false, false, false, false];
 
     $('.work__btn').each(function(i){
         $(this).click(function(){
@@ -164,6 +164,7 @@ $(function(){
     let plusVerticalLine = document.querySelector('.about__vertical');
     plusVerticalLine.style.transition = '0.6s all';
 
+    
     $('.about__plus').click( function() {
         $('.about__slider').slideToggle(1500);
         $('.about__add').slideToggle(1500, function(){
