@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&amp;family=Readex+Pro&amp;display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body> 
@@ -18,7 +19,7 @@
       </div>
     </div>
     <div class="container"> 
-      <header class="header">
+      <header class="header" data-aos="flip-up">
         <nav class="nav"> 
           <div class="nav__logo"> <img src="images/logo.png" alt="logo"></div>
           <ul class="nav__links">
@@ -41,7 +42,7 @@
         </nav>
       </header>
       <main class="main"> 
-        <section class="first"> 
+        <section class="first" data-aos="fade-up" data-aos-duration="1000">
           <div class="first__left"> 
             <h1 class="first__title">The new phones are here take a look.</h1>
             <h2 class="first__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.</h2>
@@ -49,7 +50,7 @@
           </div>
           <div class="first__right"> <img src="images/first-screen.png" alt="iphone 13"></div>
           <div class="first__lines"> 
-            <div class="first__line"> </div>
+            <div class="first__line first__line_active"> </div>
             <div class="first__line"> </div>
             <div class="first__line"> </div>
           </div>
@@ -57,18 +58,18 @@
           <div class="first__right-button"> <img src="icons/vector-right.png" alt="button right"></div>
         </section>
         <section class="categories"> 
-          <h2 class="title">Shop our latest offers and categories</h2>
-          <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+          <h2 class="title" data-aos="flip-up" data-aos-duration="1000">Shop our latest offers and categories</h2>
+          <h3 class="subtitle" data-aos="flip-up" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
           <div class="categories__block"> 
             <div class="categories__left"> 
-              <div class="categories__laptop categories__card">
+              <div class="categories__laptop categories__card" data-aos="fade-down" data-aos-duration="1500">
                 <div class="categories__image"> <img src="images/laptop.png" alt="macbook"></div>
                 <div class="categories__info"> 
                   <p class="categories__descr">Laptops</p>
                   <p class="categories__text">True Laptop Solution</p>
                 </div>
               </div>
-              <div class="categories__watch categories__card">
+              <div class="categories__watch categories__card" data-aos="fade-up" data-aos-duration="1500">
                 <div class="categories__image"> <img src="images/watch.png" alt="macbook"></div>
                 <div class="categories__info"> 
                   <p class="categories__descr">Watch</p>
@@ -77,14 +78,14 @@
               </div>
             </div>
             <div class="categories__right"> 
-              <div class="categories__phone categories__card">
+              <div class="categories__phone categories__card" data-aos="fade-up" data-aos-duration="1500">
                 <div class="categories__image"> <img src="images/phone.png" alt="macbook"></div>
                 <div class="categories__info"> 
                   <p class="categories__descr">Phones</p>
                   <p class="categories__text">Your day to day life</p>
                 </div>
               </div>
-              <div class="categories__ipad categories__card">
+              <div class="categories__ipad categories__card" data-aos="fade-down" data-aos-duration="1500">
                 <div class="categories__info"> 
                   <p class="categories__descr">Tablet</p>
                   <p class="categories__text">Empower your work</p>
@@ -95,25 +96,25 @@
           </div>
         </section>
         <section class="sale"> 
-          <h2 class="title">Save on our most selled items.</h2>
-          <h3 class="subtitle">Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</h3>
+          <h2 class="title" data-aos="flip-up" data-aos-duration="1000">Save on our most selled items.</h2>
+          <h3 class="subtitle" data-aos="flip-up" data-aos-duration="1000">Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</h3>
           <div class="sale__block"> 
-            <div class="sale__card"> <img src="images/card-macbook.png" alt="macbook pro 13">
+            <div class="sale__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><img src="images/card-macbook.png" alt="macbook pro 13">
               <div class="sale__name">MacBook Pro 13</div>
               <div class="sale__info">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</div>
               <div class="sale__price">$ 1,200.00 USD</div>
             </div>
-            <div class="sale__card"> <img src="images/card-watch.png" alt="smart galaxy watch">
+            <div class="sale__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><img src="images/card-watch.png" alt="smart galaxy watch">
               <div class="sale__name">Smart Galaxy Watch 3</div>
               <div class="sale__info">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
               <div class="sale__price">$ 199.00 USD</div>
             </div>
-            <div class="sale__card"> <img src="images/card-macbook-pro.png" alt="macbook air m1">
+            <div class="sale__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><img src="images/card-macbook-pro.png" alt="macbook air m1">
               <div class="sale__name">MacBook Air M1</div>
               <div class="sale__info">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
               <div class="sale__price">$ 1,009.00 USD</div>
             </div>
-            <div class="sale__card"> <img src="images/card-ipad.png" alt="ipad">
+            <div class="sale__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700"><img src="images/card-ipad.png" alt="ipad">
               <div class="sale__name">iPad</div>
               <div class="sale__info">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
               <div class="sale__price">$ 610.00 USD</div>
@@ -121,22 +122,22 @@
           </div>
         </section>
         <section class="service"> 
-          <h2 class="title">See the best around here</h2>
-          <h3 class="subtitle">Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</h3>
+          <h2 class="title" data-aos="flip-up" data-aos-duration="1000">See the best around here</h2>
+          <h3 class="subtitle" data-aos="flip-up" data-aos-duration="1000">Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</h3>
           <div class="service__block"> 
-            <div class="service__card"> 
+            <div class="service__card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100">
               <p class="service__descr">Smart light bulb pack</p>
               <p class="service__name">Latest and gratest</p>
               <button class="service__button button">Explore</button>
               <div class="service__image"> <img src="images/service-card-watch.png" alt="watch"></div>
             </div>
-            <div class="service__card"> 
+            <div class="service__card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300">
               <p class="service__descr">Smart light bulb pack</p>
               <p class="service__name">Best selling</p>
               <button class="service__button button">Explore</button>
               <div class="service__image"> <img src="images/service-card-iphone.png" alt="watch"></div>
             </div>
-            <div class="service__card"> 
+            <div class="service__card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500">
               <p class="service__descr">Smart light bulb pack</p>
               <p class="service__name">Every product</p>
               <button class="service__button button">Explore</button>
@@ -145,42 +146,42 @@
           </div>
         </section>
         <section class="ideas"> 
-          <h2 class="title">Ideas have a place here</h2>
-          <h3 class="subtitle">Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</h3>
+          <h2 class="title" data-aos="flip-up" data-aos-duration="1000">Ideas have a place here</h2>
+          <h3 class="subtitle" data-aos="flip-up" data-aos-duration="1000">Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</h3>
           <div class="ideas__block"> 
-            <div class="ideas__image"> <img src="images/book.png" alt="book"></div>
-            <div class="ideas__text"> 
+            <div class="ideas__image" data-aos="zoom-out-up" data-aos-duration="1000"><img src="images/book.png" alt="book"></div>
+            <div class="ideas__text" data-aos="zoom-out-down" data-aos-duration="1000">
               <p class="ideas__string">We Make It Easy To Find The Great Design Talent, Easier...</p>
               <p class="ideas__string">Road Design Handbook For The International Road...</p>
               <p class="ideas__string">The Best Kept Secrets About Creative People</p>
               <p class="ideas__string">We Make It Easy To Find The Great Design Talent, Easier...</p>
             </div>
           </div>
-          <div class="ideas__footer"> 
+          <div class="ideas__footer" data-aos="fade-up" data-aos-duration="1000">
             <div class="ideas__descr">See all</div>
             <button class="ideas__button"> <img src="icons/vector-top-right.png" alt="vector"></button>
           </div>
         </section>
         <section class="search"> 
-          <h2 class="title">Looking for anything else?</h2>
-          <div class="search__area"> <img src="icons/search.png" alt="search">
+          <h2 class="title" data-aos="flip-up" data-aos-duration="1000">Looking for anything else?</h2>
+          <div class="search__area" data-aos="fade-up" data-aos-duration="1000"><img src="icons/search.png" alt="search">
             <input class="search__input" type="text" placeholder="Search keyword">
           </div>
           <div class="search__block"> 
-            <button class="search__card">iPhone </button>
-            <button class="search__card">Charger </button>
-            <button class="search__card">Gift </button>
-            <button class="search__card">Google Pixel 3</button>
-            <button class="search__card">Keyboard </button>
-            <button class="search__card">13 Pro Max </button>
-            <button class="search__card">iPhone 12</button>
-            <button class="search__card">Laptop </button>
-            <button class="search__card">Mobile</button>
+            <button class="search__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">iPhone </button>
+            <button class="search__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Charger </button>
+            <button class="search__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Gift </button>
+            <button class="search__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Google Pixel 3</button>
+            <button class="search__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Keyboard </button>
+            <button class="search__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">13 Pro Max </button>
+            <button class="search__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">iPhone 12</button>
+            <button class="search__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">Laptop </button>
+            <button class="search__card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">Mobile</button>
           </div>
         </section>
-        <section class="feedback"> 
-          <h2 class="title">Never miss a thing</h2>
-          <h3 class="feedback__subtitle">Sign up for texts to be notified about our best offers on the perfect gifts.</h3>
+        <section class="feedback" data-aos="fade-up" data-aos-duration="2000">
+          <h2 class="title" data-aos="flip-up" data-aos-duration="1000">Never miss a thing</h2>
+          <h3 class="feedback__subtitle" data-aos="flip-up" data-aos-duration="1000">Sign up for texts to be notified about our best offers on the perfect gifts.</h3>
           <div class="feedback__image">   <img src="images/feedback.png" alt="macbook"></div>
           <form class="feedback__form" action="#">
             <input class="feedback__input" type="email" placeholder="Your email" value="">
@@ -191,7 +192,7 @@
         </section>
       </main>
     </div>
-    <footer class="footer"> 
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1000">
       <div class="footer__block"> 
         <div class="footer__left"> 
           <div class="footer__image"> <img src="images/logo.png" alt="logo"></div>
@@ -206,5 +207,7 @@
       </div>
     </footer>
     <script src="js/script.min.js"> </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
   </body>
 </html>
