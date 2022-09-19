@@ -22,10 +22,10 @@ $(function(){
             $($('.work__link')[i]).css('transition', '0s').slideToggle(300, function(){
                 $($('.work__text')[i]).css('transition', '0s').slideToggle(500, function(){
                     if ( active[i] == false ) {
-                        $($('.work__arrow')[i]).css('transform', 'rotate(180deg)');
+                        $($('.work__arrow')[i]).css('transform', 'scale(-1)');
                         active[i] = true;
                     } else {
-                        $($('.work__arrow')[i]).css('transform', 'rotate(0deg)');
+                        $($('.work__arrow')[i]).css('transform', 'scale(1)');
                         active[i] = false;
                     }
                 });
@@ -178,37 +178,37 @@ $(function(){
         });
     });
 
-    // different certificate width
+    // // different certificate width
 
-    let certificate = document.querySelector('.about__certificate');
-    let certificateButton = document.querySelector('.about__slide img');
-    let certificateActive = false;
-    certificate.style.transition = '0.6s all';
-    certificateButton.style.transition = '0.6s all';
-    certificateButton.addEventListener('click', function(){
-        if ( certificateActive == false ) {
-            certificate.style.width = '100%';
-            certificateButton.style.transform = 'rotate(90deg)';
-            certificateActive = true;
-        } else {
-            certificate.style.width = '40%';
-            certificateButton.style.transform = 'rotate(-90deg)';
-            certificateActive = false;
-        }
-    });
+    // let certificate = document.querySelector('.about__certificate');
+    // let certificateButton = document.querySelector('.about__slide img');
+    // let certificateActive = false;
+    // certificate.style.transition = '0.6s all';
+    // certificateButton.style.transition = '0.6s all';
+    // certificateButton.addEventListener('click', function(){
+    //     if ( certificateActive == false ) {
+    //         certificate.style.width = '100%';
+    //         certificateButton.style.transform = 'rotate(90deg)';
+    //         certificateActive = true;
+    //     } else {
+    //         certificate.style.width = '40%';
+    //         certificateButton.style.transform = 'rotate(-90deg)';
+    //         certificateActive = false;
+    //     }
+    // });
 
-    //modal certificate
+    // //modal certificate
 
-    let modalCertificate = document.querySelector('.about__modal');
-    let imgCertificate = document.querySelector('.about__certificate img');
-    modalCertificate.style.transition = '0.6s all';
+    // let modalCertificate = document.querySelector('.about__modal');
+    // let imgCertificate = document.querySelector('.about__certificate img');
+    // modalCertificate.style.transition = '0.6s all';
 
-    imgCertificate.addEventListener('click', function(){
-        modalCertificate.style.display = 'flex';
-    });
+    // imgCertificate.addEventListener('click', function(){
+    //     modalCertificate.style.display = 'flex';
+    // });
 
-    modalCertificate.addEventListener('click', function(){
-        modalCertificate.style.display = 'none';
-    });
+    // modalCertificate.addEventListener('click', function(){
+    //     modalCertificate.style.display = 'none';
+    // });
 
 });
