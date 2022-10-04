@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+    transition: 0.6s all;
+}
+
+.block {
+    width: 500px;
+    min-height: 151px;
+    border: 2px solid black;
+    padding: 30px;
+    padding-bottom: 30px;
+    margin: 30px auto;
+    background: #FFD050;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+}
+
+.block__title {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.block__input {
+    width: 80%;
+    height: 40px;
+    padding: 7px;
+    padding-left: 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.block__input::placeholder {
+    color: black;
+    opacity: 0.5;
+    font-weight: 700;
+}
+
+.block__button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    border-radius: 100%;
+    line-height: 0px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: 0.6s;
+    border: 1px solid black;
+    position: relative;
+    background: lightblue;
+}
+
+.block__button::after {
+    content: '+';
+    position: absolute;
+    top: 44%;
+    left: 19%;
+}
+
+/* .block__button:hover {
+    background: darkcyan;
+} */
+
+.block__button:hover {
+    background: cadetblue;
+}
+
+.block__wrapper {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block__item {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 5px 10px 5px 20px;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.block__item:hover {
+    background: white;
+}
+
+/* .block__item::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(trash3.svg) center center/cover no-repeat;
+    right: 20px;
+    top: 6px;
+} */
+
+.block__list {
+    width: 90%;
+    overflow: hidden;
+}
+
+.block__trash {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 7px;
+    opacity: 0;
+}
+
+.block__trash:hover {
+    background: salmon;
+}
+
+.block__item {
+    margin-left: 0px;
+    width: auto;
+}
+
+.block__item:hover .block__trash {
+    opacity: 1;
+}
+
+.block__trash img {
+    width: 100%;
+    height: 100%;
+}
+
+.block__clear {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 20px;
+    border-radius: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-top: 20px;
+    opacity: 0;
+    overflow: hidden;
+    height: 0px;
+    display: none;
+}
+
+.block__clear:hover {
+    background: darksalmon;
+}
+
+.block__clear img {
+    width: 25px;
+}
+
+.block__info {
+    position: absolute;
+    bottom: 0px;
+    z-index: -10;
+}
