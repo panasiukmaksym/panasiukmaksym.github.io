@@ -10,7 +10,7 @@
     height: auto;
     border: 2px solid black;
     padding: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     margin: 30px auto;
     background: #FFD050;
     color: black;
@@ -22,8 +22,11 @@
 }
 
 .block__title {
-    font-size: 30px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .block__text {
@@ -62,6 +65,10 @@
     border: 1px solid black;
     position: relative;
     background: lightblue;
+}
+
+.block__button span {
+    margin-top: -7px;
 }
 
 /* .block__button::after {
