@@ -266,12 +266,21 @@ document.addEventListener('keyup', (event) => {
 
 listBlock.addEventListener('click', (event) => {
     if ( event.target.classList[0] == 'block__trash' ) {
-        localStorage.removeItem(Number(event.target.parentNode.firstChild.firstChild.textContent));
-        infoText('Видалено один пункт');
-        if ( localStorage.length < 1 ) {
-            clearning.style.display = 'none';
-        }
-        repaint();
+
+        console.log(event.target.parentNode);
+        event.target.parentNode.style.margin = '0px 150% 5px -150%';
+
+        setTimeout(function(){
+
+            
+            localStorage.removeItem(Number(event.target.parentNode.firstChild.firstChild.textContent));
+            infoText('Видалено один пункт');
+            if ( localStorage.length < 1 ) {
+                clearning.style.display = 'none';
+            }
+            repaint();
+            
+        }, 600);
     }
 });
 
