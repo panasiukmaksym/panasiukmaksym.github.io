@@ -7,7 +7,7 @@
 
 .block {
     width: 500px;
-    min-height: 151px;
+    height: auto;
     border: 2px solid black;
     padding: 30px;
     padding-bottom: 30px;
@@ -63,13 +63,13 @@
     background: lightblue;
 }
 
-.block__button::after {
+/* .block__button::after {
     content: '+';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%);
-}
+} */
 
 .block__button:hover {
     background: cadetblue;
