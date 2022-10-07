@@ -115,7 +115,8 @@ setInterval( () => {
         hourTwo = today.getHours();
     } else {
         hourOne = String(today.getHours());
-        hourTwo = hourDote[1];
+        hourTwo = hourOne[1];
+        hourOne = hourOne[0];
     }
 
     if ( today.getMinutes() < 10 ) {
