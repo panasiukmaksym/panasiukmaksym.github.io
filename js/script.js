@@ -4,7 +4,11 @@ $(function(){
 
     // hover effect on arrows at jq
 
-    $('.work__wrapper').each(function(i){
+    function getRan() {
+        return Math.random() * (10 - -10) + -10;
+    }
+
+    $('.work__item').each(function(i){
         $(this).mouseover(function(){
             $($('.work__btn')[i]).css('margin-top', '8px');
         });
