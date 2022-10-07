@@ -100,9 +100,9 @@ function paintNumber(number, selector) {
         item.style.transform = 'translate(0px) scale(1)';
         item.style.boxShadow = '1px 1px 1px black';
         if ( item.style.background == activeDoteColor ) {
-            item.style.border = '2px solid black';
+            item.style.border = '1px solid black';
             item.style.boxShadow = '3px 3px 3px black';
-            item.style.transform = 'translate(-5px, -5px) scale(1.2)';
+            item.style.transform = 'translate(-4px, -7px) scale(1.4)';
         }
     });
 
