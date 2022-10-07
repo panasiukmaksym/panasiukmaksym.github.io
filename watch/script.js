@@ -4,13 +4,17 @@ const dotesAll = document.querySelectorAll('.dotes');
 let noActiveDoteColor = 'tomato';
 let activeDoteColor = 'white';
 
+// hourDote.forEach( (item, i) => {
+//     item.textContent = i;
+// });
+
 function paintNumber(number, selector) {
 
     let arrDotes = [];
     if ( number == 0 ) {
         arrDotes = [18, 19, 20, 21, 29, 37, 45, 53, 61, 69, 77, 76, 75, 74, 66, 58, 50, 42, 34, 26];
     } else if ( number == 1 ) {
-        arrDotes = [21, 29, 37, 45, 53, 61, 69, 77, 28, 76];
+        arrDotes = [20, 28, 36, 44, 52, 60, 68, 76, 27, 75, 77];
     } else if ( number == 2 ) {
         arrDotes = [18, 19, 20, 21, 29, 37, 45, 53, 52, 51, 50, 58, 66, 74, 75, 76, 77, 26];
     } else if ( number == 3 ) {
@@ -24,7 +28,7 @@ function paintNumber(number, selector) {
     } else if ( number == 7 ) {
         arrDotes = [18, 19, 20, 21, 29, 37, 45, 52, 60, 68, 76, 26];
     } else if ( number == 8 ) {
-        arrDotes = [19, 20, 29, 37, 53, 61, 69, 76, 75, 66, 58, 50, 34, 26, 43, 44];
+        arrDotes = [19, 20, 29, 37, 53, 61, 69, 76, 75, 66, 58, 50, 34, 26, 43, 44, 21, 18, 74, 77, 45, 42];
     } else if ( number == 9 ) {
         arrDotes = [18, 19, 20, 21, 29, 37, 45, 53, 61, 69, 77, 76, 75, 74, 42, 34, 26, 43, 44, 66];
     }
