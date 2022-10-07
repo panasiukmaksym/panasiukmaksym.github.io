@@ -28,10 +28,9 @@ body {
     gap: 2px;
 }
 
-.hours__dote, .minutes__dote, .seconds__dote {
+/* .hours__dote, .minutes__dote, .seconds__dote {
     background: black;
-    color: yellow;
-}
+} */
 
 .under {
     width: 20px;
