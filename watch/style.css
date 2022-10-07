@@ -26,6 +26,7 @@ body {
     grid-template-columns: repeat(8, 20px);
     grid-auto-rows: 20px;
     gap: 2px;
+    transition: 0.1s all;
 }
 
 /* .hours__dote, .minutes__dote, .seconds__dote {
@@ -39,6 +40,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    transition: 0.1s all;
+    z-index: -10;
 }
 
 .dote {

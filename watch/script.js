@@ -156,3 +156,29 @@ setInterval( () => {
     paintNumber(secondsTwo, 's2');
 
 }, 1000);
+
+let activeParallax = false;
+let eventParallax;
+function parallax() {
+    let widthScreen = ( document.querySelector('html').offsetWidth / 2 ) - event.clientX;
+            let heightScreen = ( document.querySelector('html').clientHeight / 2 ) - event.clientY;
+
+            document.querySelector('.hours').style.transform = `translate(${widthScreen / 20}px, ${heightScreen / 10}px)`;
+            document.querySelector('.hours-two').style.transform = `translate(${widthScreen / 22}px, ${heightScreen / 12}px)`;
+            document.querySelector('.minutes').style.transform = `translate(${widthScreen / 24}px, ${heightScreen / 14}px)`;
+            document.querySelector('.minutes-two').style.transform = `translate(${widthScreen / 26}px, ${heightScreen / 16}px)`;
+            document.querySelector('.seconds').style.transform = `translate(${widthScreen / 22}px, ${heightScreen / 12}px)`;
+            document.querySelector('.seconds-two').style.transform = `translate(${widthScreen / 20}px, ${heightScreen / 10}px)`;
+
+            document.querySelectorAll('.under')[0].style.transform = `translate(${widthScreen / 20}px, ${heightScreen / 20}px)`;
+            document.querySelectorAll('.under')[1].style.transform = `translate(${widthScreen / 20}px, ${heightScreen / 20}px)`;
+}
+document.querySelector('html').addEventListener('click', (e) => {
+    if ( activeParallax == false ) {
+        eventParallax = document.querySelector('html').addEventListener('mousemove', parallax); 
+        activeParallax = true;
+    } else if ( activeParallax == true ) {
+        eventParallax = document.querySelector('html').removeEventListener('mousemove', parallax); 
+        activeParallax = false;
+    }
+});
