@@ -93,10 +93,14 @@ function paintNumber(number, selector) {
 
     dotesAll.forEach( item => {
         item.style.border = 'none';
+        // item.style.boxShadow = 'none';
+        item.style.transform = 'translate(0px) scale(1)';
         item.style.boxShadow = '1px 1px 1px black';
         if ( item.style.background == activeDoteColor ) {
             item.style.border = '2px solid black';
             item.style.boxShadow = '3px 3px 3px black';
+            item.style.transform = 'translate(-5px, -5px) scale(1.2)';
+            // item.style.transform = 'scale(1.2)';
         }
     });
 
