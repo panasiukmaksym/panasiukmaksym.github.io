@@ -1,8 +1,8 @@
 const hourDote = document.querySelectorAll('.hours .hours__dote');
 const dotesAll = document.querySelectorAll('.dotes');
 
-let noActiveDoteColor = '#FFD050';
-let activeDoteColor = 'tomato';
+let noActiveDoteColor = 'tomato';
+let activeDoteColor = 'white';
 
 function paintNumber(number, selector) {
 
@@ -91,11 +91,14 @@ function paintNumber(number, selector) {
 
     }
 
-    // dotesAll.forEach( item => {
-    //     if ( item.style.background == activeDoteColor ) {
-    //         item.style.border = '5px solid black';
-    //     }
-    // });
+    dotesAll.forEach( item => {
+        item.style.border = 'none';
+        item.style.boxShadow = '1px 1px 1px black';
+        if ( item.style.background == activeDoteColor ) {
+            item.style.border = '2px solid black';
+            item.style.boxShadow = '3px 3px 3px black';
+        }
+    });
 
 }
 
