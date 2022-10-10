@@ -67,6 +67,7 @@ listBlock.addEventListener('click', (event) => {
 });
 function repaint() {
     const arrFromStorage = Object.values(localStorage);
+    arrFromStorage.sort();
     localStorage.clear();
     listBlock.innerHTML = '';
     point = 1;
